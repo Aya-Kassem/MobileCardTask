@@ -47,7 +47,7 @@ input:focus-visible {
 
     .mobile-card-wrapperCss {
         position: relative;
-        /* height: 95vh; */
+        height: 1140px;
         width: 515px;
         border-radius: 80px;
         border: 5px solid #504c46;
@@ -72,6 +72,7 @@ input:focus-visible {
             border-bottom-left-radius: 70px;
             border-bottom-right-radius: 70px;
         }
+
         .side-buttons {
             position: absolute;
             top: 200px;
@@ -102,6 +103,7 @@ input:focus-visible {
         }
     }
 }
+
 
 .mobile-card-wrapperCss::after {
     content: "";
@@ -382,21 +384,22 @@ input:focus-visible {
 /* ---- SMALL SCREEN STYLING ---- */
 @media (max-width: 551px){
 
-    .main{
+    .main, .mainCss{
         .title{
             font-size: 18px;
-            margin: 0;
         }
     }
-    .mainCss .mobile-card-wrapperCss {
-        width: 276px;
-        border-radius: 45px;
-        height: 576px;
 
-
-        .footer {
-            border-bottom-left-radius: 35px;
-            border-bottom-right-radius: 30px;
+    .mainCss {
+        .mobile-card-wrapperCss{
+            width: 276px;
+            border-radius: 45px;
+            height: 576px;
+        
+            .footer{
+                border-bottom-left-radius: 35px;
+                border-bottom-right-radius: 30px;
+            }
         }
     }
 

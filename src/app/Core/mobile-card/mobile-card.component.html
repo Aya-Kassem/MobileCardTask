@@ -1,0 +1,77 @@
+<div class="mainCss d-flex">
+    <h2 class="title">Mobile Card CSS Based</h2>
+    <div class="mobile-card-wrapperCss">
+        <div class="inner-div d-flex">
+            <div class="header d-flex">
+                <div class="header-top-part d-flex justify-content-space-between align-items-center ">
+                    <span class="time">{{ date | date:"HH:mm" }}</span>
+                    <div class="top-bar d-flex"></div>
+                    <div class="info">
+                        <img src="signal.svg" alt="Signal">
+                        <img src="wifi-alt.svg" alt="Wifi" class="m-2">
+                        <img src="battery-full.svg" alt="Battery">
+                    </div>
+                </div>
+
+                <div class="communicate d-flex align-items-center ">
+                    <div class="round d-flex justify-content-center align-items-center">
+                        <img src="communicate.svg" alt="Communicate">
+                    </div>
+                    <p>communicate</p>
+                </div>
+            </div>
+            <div class="content" [ngStyle]="{'background-image': 'url(bg.png)'}" >
+                <div class="content-header">
+                    <span class="today">Today</span>
+                </div>
+                <div class="welcomeCard">
+                    <div class="card-img-top">
+                        <img src="card-top-img.png" alt="">
+                    </div>
+
+                    <div class="card-content">
+                        <div class="greeting">
+                            <p>Hello Aya,</p>
+                            <p>how are you doing?</p>
+                        </div>
+                        <p class="content-gray thanks-note">Thank you for your time.</p>
+                        <span class="content-time d-flex content-gray">{{ date | date:"HH:mm" }} </span>
+                    </div>
+
+                    <div class="user-interactions d-flex">
+                        <button type="button" (click)="visitOurWebSite()">
+                            <img src="redirect.svg" alt="visit our website" class="redirect">
+                            <span>Visit our website</span>
+                        </button>
+                        <button type="button" (click)="callUs()">
+                            <img src="call-icon.svg" alt="call us" class="call" >
+                            <span>Call us</span>
+                        </button>
+                        <button type="button" (click)="done()">
+                            <img src="curved-arrow.svg" alt="done" class="done" >
+                            <span>Done</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer d-flex">
+                <div class="footer-top-part d-flex justify-content-space-between">
+                    <img src="plus.svg" alt="Add">
+                    <div class="writing-box d-flex">
+                        <input type="text">
+                        <img src="sticker.svg" alt="sticker" class="sticker" >
+                    </div>
+                    <img src="camera.svg" alt="camera" class="camera">
+                    <img src="mic-regular.svg" alt="mic" class="mic">
+                </div>
+                <div class="footer-bar d-flex"></div>
+            </div>
+        </div>
+
+        <div class="side-buttons">
+            <span class="close"></span>
+            <span class="volume-up"></span>
+            <span class="volume-down"></span>
+        </div>
+    </div>
+</div>
