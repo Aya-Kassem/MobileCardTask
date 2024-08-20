@@ -1,1 +1,580 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --card-gray-color: #f4f4f4;
+    --main-bg: #e6e6e6;
+    --footer-bg: #f5f5f5;
+    --content-gray: #b6b6b6;
+    --links-color: #1492e6;
+}
+
+input:focus,
+input:focus-visible {
+    border: none !important;
+    outline: none !important;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.m-2 {
+    margin: 0 8px;
+}
+
+/* ---- STYLE FOR CSS BASED MOBILE ---- */
+
+.mainCss {
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    .mobile-card-wrapperCss {
+        position: relative;
+        /* height: 95vh; */
+        width: 515px;
+        border-radius: 80px;
+        border: 5px solid #504c46;
+
+        .inner-div {
+            border: 12px solid;
+            height: 100%;
+            width: 100%;
+            border-radius: 75px;
+            flex-direction: column;
+
+
+            .header {
+                border-top-left-radius: 70px;
+                border-top-right-radius: 70px;
+            }
+
+            
+        }
+
+        .footer {
+            border-bottom-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+        }
+        .side-buttons {
+            position: absolute;
+            top: 200px;
+            left: -8px;
+            display: flex;
+            flex-direction: column;
+
+
+            .close {
+                height: 50px;
+            }
+
+            .volume-up,
+            .volume-down {
+                height: 80px;
+                margin-top: 20px;
+            }
+
+            .close,
+            .volume-down,
+            .volume-up {
+                background-color: #504c46;
+                border: 1px solid #595551;
+                border-radius: 50px;
+                width: 4px;
+                box-shadow: 0px 0px 4px 0px rgb(171 167 167);
+            }
+        }
+    }
+}
+
+.mobile-card-wrapperCss::after {
+    content: "";
+    display: inline-block;
+    height: 100px;
+    width: 3px;
+    border-radius: 50px;
+
+    background-color: #504c46;
+    border: 1px solid #595551;
+    border-left: none;
+
+    position: absolute;
+    top: 280px;
+    right: -8px;
+    box-shadow: 0px 0px 4px 0px rgb(171 167 167);
+}
+
+/* ---- COMMON STYLES ---- */
+.main {
+    flex-direction: column;
+}
+
+.title {
+    margin: 8px 0;
+    text-align: center;
+}
+
+.mobile-card-wrapper {
+    position: relative;
+    img {
+        height: 100%;
+    }
+}
+
+.card {
+    position: absolute;
+    top: 25px;
+    left: 28px;
+    right: 28px;
+    bottom: 30px;
+
+    color: white;
+    font-size: 2rem;
+    flex-direction: column;
+}
+
+
+.header {
+    padding: 15px 40px 0;
+    flex-direction: column;
+    color: #000;
+    border-bottom: 1px solid var(--main-bg);
+    background-color: var(--card-gray-color);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+
+    .header-top-part {
+        img {
+            width: 25px;
+        }
+
+        .time {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .top-bar {
+            height: 35px;
+            width: 35%;
+            background-color: #000;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+    }
+
+    .communicate {
+        padding-top: 10px;
+        padding-bottom: 5px;
+
+        .round {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin-right: 10px;
+
+            img {
+                width: 35px;
+            }
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 20px;
+        }
+    }
+
+}
+
+.content {
+    flex-grow: 1;
+    position: relative;
+
+    .content-header {
+        text-align: center;
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            padding: 1px 23px;
+            border: 1px solid var(--main-bg);
+            border-radius: 20px;
+            background-color: #f9f6ef;
+            color: #000;
+            font-size: 15px;
+            font-weight: 800;
+            box-shadow: rgba(0, 0, 0, 0.35) 0 3px 12px;
+        }
+    }
+
+    .welcomeCard {
+        position: absolute;
+        height: fit-content;
+        padding: 0 5px;
+        left: 40px;
+        right: 85px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.30) 0px 3px 12px;
+
+        .card-img-top {
+            padding: 20px 15px;
+            height: 280px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .card-content {
+            color: #000;
+            font-size: 20px;
+            margin-top: 20px;
+            border-bottom: 1px solid var(--main-bg);
+
+            .content-time {
+                justify-content: end;
+                margin: 0 15px 10px 0;
+            }
+
+            .greeting {
+                margin: 0 0 25px 15px;
+                font-weight: bold;
+
+                :first-child {
+                    margin-bottom: 8px;
+                }
+            }
+
+            .thanks-note {
+                margin-left: 15px;
+            }
+        }
+
+        .user-interactions {
+            flex-direction: column;
+
+            button {
+                cursor: pointer;
+                border: none;
+                border-bottom: 1px solid var(--main-bg);
+                color: var(--links-color);
+                padding: 17px 0;
+                font-size: 25px;
+                font-weight: 500;
+                background: none;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    margin-right: 10px;
+                }
+
+                .redirect {
+                    width: 30px;
+                }
+
+                .done {
+                    width: 35px;
+                }
+
+                .call {
+                    width: 40px;
+                }
+            }
+
+            :last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .welcomeCard::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        bottom: 15px;
+        left: -15px;
+        border: 10px solid;
+        border-color: transparent #fff #fff transparent;
+
+    }
+
+}
+
+.footer {
+    flex-direction: column;
+    padding: 10px 10px;
+    border-top: 1px solid var(--main-bg);
+    background-color: var(--footer-bg);
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    .footer-bar {
+        height: 5px;
+        width: 35%;
+        background-color: #000;
+        border-radius: 5px;
+        margin: 30px auto 0;
+    }
+
+    .footer-top-part {
+        img {
+            width: 28px;
+            cursor: pointer;
+        }
+
+        .writing-box {
+            height: 35px;
+            width: 70%;
+            background-color: #fff;
+            border-radius: 25px;
+            margin: 0 15px;
+            padding: 0 10px;
+            border: 1px solid var(--main-bg);
+
+            input {
+                flex-grow: 1;
+                border: none;
+                background-color: inherit;
+            }
+
+            .sticker {
+                width: 23px;
+            }
+        }
+
+        .mic {
+            margin-left: 10px;
+            width: 20px;
+        }
+
+    }
+}
+
+.content-gray {
+    color: var(--content-gray);
+    font-weight: 500;
+}
+
+
+/* ---- SMALL SCREEN STYLING ---- */
+@media (max-width: 551px){
+
+    .main{
+        .title{
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+    .mainCss .mobile-card-wrapperCss {
+        width: 276px;
+        border-radius: 45px;
+        height: 576px;
+
+
+        .footer {
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 30px;
+        }
+    }
+
+    .mainCss .mobile-card-wrapperCss .inner-div {
+        border-radius: 40px;
+        border: 8px solid;
+    }
+
+    .mobile-card-wrapperCss::after {
+        height: 55px;
+        top: 190px;
+    }
+
+    .mainCss .mobile-card-wrapperCss .side-buttons {
+        top: 100px;
+    }
+
+    .mainCss .mobile-card-wrapperCss .side-buttons .close {
+        height: 30px;
+    }
+
+    .mainCss .mobile-card-wrapperCss .side-buttons .volume-up,
+    .mainCss .mobile-card-wrapperCss .side-buttons .volume-down {
+        height: 45px;
+    }
+
+    .card {
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        right: 15px;
+        /* right: 28px */
+        bottom: 16px;
+    }
+
+    .header {
+        border-top-left-radius: 38px;
+        border-top-right-radius: 30px;
+        padding: 3px 12px;
+    }
+
+    .mainCss .mobile-card-wrapperCss .inner-div .header {
+        border-top-left-radius: 40px;
+        border-top-right-radius: 30px;
+        padding: 10px 12px 0;
+
+        .communicate {
+            margin: 7px;
+        }
+    }
+
+    .header .header-top-part .top-bar {
+        height: 18px;
+        width: 30%;
+        margin-left: 0;
+    }
+
+    .header .header-top-part .time {
+        font-size: 14px;
+    }
+
+    .header .header-top-part img {
+        width: 18px;
+    }
+
+    .header .communicate .round {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header .communicate .round img {
+        width: 25px;
+    }
+
+    .header .communicate {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .header .communicate p {
+        font-size: 17px;
+    }
+
+    .content .content-header {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+
+    .content .content-header span {
+        padding: 1px 16px;
+        font-size: 13px;
+        margin: 7px 0;
+    }
+
+    .content .welcomeCard {
+        left: 20px;
+        right: 35px;
+    }
+
+    .content .welcomeCard .card-img-top {
+        padding: 8px 2px;
+        height: 110px;
+    }
+
+    .content .welcomeCard .card-content {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .content .welcomeCard .card-content .greeting :first-child {
+        margin-bottom: 4px;
+    }
+
+    .content .welcomeCard .card-content .greeting {
+        margin: 0 0 15px 15px;
+    }
+
+    .content .welcomeCard .user-interactions button {
+        font-size: 15px;
+        padding: 8px 0;
+    }
+
+    .content .welcomeCard .user-interactions button .redirect {
+        width: 18px;
+    }
+
+    .content .welcomeCard .user-interactions button .call {
+        width: 20px;
+    }
+
+    .content .welcomeCard .user-interactions button .done {
+        width: 25px;
+    }
+
+    .content .welcomeCard::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        bottom: 15px;
+        left: -11px;
+        border: 6px solid;
+        border-color: transparent #fff #fff transparent;
+    }
+
+    .footer {
+        padding: 8px;
+        border-bottom-left-radius: 35px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .footer .footer-top-part .mic,
+    .footer .footer-top-part .writing-box img:not(.sticker),
+    .footer .footer-top-part img:not(.mic),
+    .footer .footer-top-part .writing-box .sticker {
+        width: 16px;
+    }
+
+    .footer .footer-top-part .mic {
+        margin-left: 7px;
+    }
+
+    .footer .footer-bar {
+        margin: 15px auto 0;
+    }
+
+    .footer .footer-top-part .writing-box {
+        height: 26px;
+        margin: 0px 8px;
+    }
+
+    .footer .footer-top-part .writing-box input {
+        flex-grow: unset;
+        width: 90%;
+    }
+
+    .mobile-card-wrapper {
+        height: none;
+    }
+}
