@@ -1,11 +1,11 @@
-import { CommonModule, DatePipe } from '@angular/common';
+import { CommonModule, DatePipe ,NgOptimizedImage } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-mobile-card',
     standalone: true,
-    imports: [DatePipe, CommonModule],
+    imports: [DatePipe, CommonModule, NgOptimizedImage],
     templateUrl: './mobile-card.component.html'
 })
 export class MobileCardComponent {

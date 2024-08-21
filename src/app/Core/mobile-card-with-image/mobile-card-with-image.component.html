@@ -1,7 +1,7 @@
 <div class="main d-flex">
     <h2 class="title">Mobile Card Image Based</h2>
     <div class="mobile-card-wrapper">
-        <img [src]="src" alt="mobile" class="mobile" #img>
+        <img [src]="src" alt="mobile" class="mobile" priority >
         <div class="card d-flex justify-content-space-between" >
             <div class="header d-flex">
                 <div class="header-top-part d-flex justify-content-space-between align-items-center ">
@@ -21,7 +21,7 @@
                     <p>communicate</p>
                 </div>
             </div>
-            <div class="content" [ngStyle]="{'background-image': 'url(bg.png)'}"  >
+            <div class="content" [ngStyle]="{'background-image': 'url(bg.png)'}" priority >
                 <div class="content-header">
                     <span class="today">Today</span>
                 </div>

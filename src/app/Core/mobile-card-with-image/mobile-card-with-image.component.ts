@@ -1,11 +1,13 @@
-import { CommonModule, DatePipe, isPlatformBrowser } from '@angular/common';
+import { CommonModule, DatePipe, isPlatformBrowser, NgOptimizedImage  } from '@angular/common';
 import { Component, HostListener, Input, PLATFORM_ID, inject } from '@angular/core';
 import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-mobile-card-with-image',
   standalone: true,
-  imports: [DatePipe, CommonModule],
+  imports: [DatePipe, CommonModule, NgOptimizedImage ],
   templateUrl: './mobile-card-with-image.component.html'
 })
 
